@@ -1,0 +1,11 @@
+**.rpt
+**.summary
+*.jdi
+**.rpt
+*.pin
+*.qpf
+*.qsf
+*.sld
+*.sof
+*.txt
+*.log
