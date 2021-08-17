@@ -9,3 +9,7 @@
 *.sof
 *.txt
 *.log
+*.v
+*.fir
+**.json
+*db*
