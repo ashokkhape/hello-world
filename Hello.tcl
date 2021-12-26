@@ -22,25 +22,22 @@ package require ::quartus::project
 
 
 # Make assignments
-if {$make_assignments} {
-	set_global_assignment -name FAMILY "Cyclone V"
-	set_global_assignment -name DEVICE 5CSEBA6U23I7
-	set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
-	set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:05:33  DECEMBER 21, 2021"
-	set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
-	set_global_assignment -name VERILOG_FILE Hello.v
-	set_location_assignment PIN_W15 -to io_led
-	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_led
-	set_location_assignment PIN_V11 -to clock
-	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clock
-	set_location_assignment PIN_AH17 -to reset
-	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset
 
-	# Commit assignments
-	export_assignments
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:05:33  DECEMBER 21, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name VERILOG_FILE Hello.v
+set_location_assignment PIN_W15 -to io_led
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_led
+set_location_assignment PIN_V11 -to clock
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clock
+set_location_assignment PIN_AH17 -to reset
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset
 
-	# Close project
-	if {$need_to_close_project} {
-		project_close
-	}
-}
+# Commit assignments
+export_assignments
+
+
+
